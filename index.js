@@ -57,7 +57,7 @@ async function run() {
             const options = { upsert : true }
             const updatedoc = {
                 $set : {
-                    data
+                    ...data
                 }
             }
             const result = await userCollections.updateOne(query,updatedoc,options)
